@@ -53,7 +53,16 @@ export class Toolbox {
     
     }
 
-    isWithinRect(){
-        
+    isWithinRect(pointX, pointY, rectX, rectY, rectW, rectH){
+        if(pointX > rectX + rectW){
+            return false;
+        } else if(pointX < rectX){
+            return false;
+        } else if(pointY < rectY){
+            return false;
+        } else if(pointY > rectY + rectH){
+            return false;
+        }
+        else return true
     }
 }
