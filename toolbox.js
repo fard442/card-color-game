@@ -51,5 +51,9 @@ export class Toolbox {
 
             return color;
     
-}
+    }
+
+    isWithinRect(){
+        
+    }
 }

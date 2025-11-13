@@ -36,6 +36,19 @@ export class MemoryButton {
         let clickX=event.offsetX;
         let clickY=event.offsetY;
 
-        console.log()
+        console.log(clickX +" / "+clickY);
+
+        let isClickInButton = this.toolbox.isWithinRect(
+            clickX, 
+            clickY, 
+            this.x, 
+            this.y, 
+            this.width, 
+            this.height
+        )
+        
+        if(isClickInButton){
+            this.isFaceUp = !this.isFaceUp;
+        }
     }
 }
