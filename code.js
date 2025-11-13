@@ -9,14 +9,24 @@ let toolbox = new Toolbox()
 // testCard.fillStyle = toolbox.getRandomColor()
 // testCard.draw();
 
+
+//row 1
 let color1 = toolbox.getRandomColor();
 let card1a = new MemoryButton(canvas, pencil, 50, 50, color1);
-let card1b = new MemoryButton(canvas, pencil, 200, 50, color1);
+let card1b = new MemoryButton(canvas, pencil, 175, 50, color1);
+
+//row 2
+let color2 = toolbox.getRandomColor();
+let card2a = new MemoryButton(canvas, pencil, 300, 50, color2);
+let card2b = new MemoryButton(canvas, pencil, 425, 50, color2);
 
 function gameLoop(){
     pencil.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
     card1a.draw();
     card1b.draw();
+
+    card2a.draw();
+    card2b.draw();
 }
 setInterval(gameLoop, 50)
 
