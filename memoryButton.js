@@ -53,5 +53,11 @@ export class MemoryButton {
         if(isClickInButton){
             this.isFaceUp = !this.isFaceUp;
         }
+
+        if(this.isFaceUp){
+            if(this.color == this.color){
+                console.log("matching pair")
+            }
+        }
     }
 }

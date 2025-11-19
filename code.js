@@ -31,6 +31,22 @@ function gameLoop(){
 setInterval(gameLoop, 50)
 
 
+let score = 0;
+let highScore = 0;
+function raiseScore(){
+    score += 1;
+    if (highScore <= score){
+        highScore = score
+    }
+    let scoreElement = document.getElementById("scoreDisplay");
+    let highscoreElement = document.getElementById("highScoreDisplay");
+    scoreElement.innerHTML = "Time: " +score;
+    highscoreElement.innerHTML = "Best time: " +highScore;
+   
+    
+}
+setInterval(raiseScore, 1000)
+
 function detectClicks(){
     console.log("cluh")
 }
